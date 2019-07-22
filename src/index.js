@@ -52,3 +52,33 @@ export function diffHTMLStrings(original, modified) {
 
   return newDOM;
 }
+
+function component() {
+  const original = `<div>
+    <h1>This is a heading</h1>
+    <h2>This heading is modified from h2 to h3</h2>
+    <p>This is the original text</p>
+    <ul>
+      <li id="item1">Item 1</li>
+      <li id="item2">Item 2</li>
+      <li id="item3">This item is the original</li>
+      <li id="item4">This item will be removed</li>
+    </ul>
+  </div>`;
+  const modified = `<div>
+    <h1>This is a heading</h1>
+    <h3>This heading is modified from h2 to h3</h3>
+    <p>This is the modified text</p>
+    <ul>
+      <li id="item5">This item was added</li>
+      <li id="item1">Item 1</li>
+      <li id="item2">Item 2</li>
+      <li id="item3">This item is modified</li>
+    </ul>
+    <p>This text was added</p>
+  </div>`;
+
+  return diffHTMLStrings(original, modified);
+}
+
+document.body.appendChild(component());
