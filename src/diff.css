@@ -1,0 +1,7 @@
+.diff-removed {
+  color: red;
+}
+
+.diff-added {
+  color: green;
+}
