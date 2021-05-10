@@ -21,7 +21,7 @@
   "dependencies": {
     "diff": "^4.0.1",
     "html-to-vdom": "^0.7.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "vdom-virtualize": "^2.0.0",
     "virtual-dom": "^2.1.1"
   }
